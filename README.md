@@ -3,7 +3,7 @@ Here I will push 1 project everyday which will be based on Machine Learning, Sta
 
 ## Here are the List of Projects Day wise
 
-1️⃣ Titanic Survival Prediction~
+1️⃣ Titanic Survival Prediction<br>
 2️⃣ Weather Data Analysis
 3️⃣ Stock Price Web Scraper
 4️⃣ Movie Ratings EDA
