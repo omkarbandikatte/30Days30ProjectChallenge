@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Titanic Survival Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Titanic Survival Predictor</h1>
+        <img src="{{ url_for('static', filename='titanic.jpg') }}" alt="Titanic" class="titanic-img">
+        <form action="/predict" method="post">
+            <label for="pclass">Passenger Class (1/2/3):</label>
+            <input type="number" name="pclass" min="1" max="3" required>
+
+            <label for="sex">Sex:</label>
+            <select name="sex" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <input type="number" name="age" step="0.1" min="0" required>
+
+            <label for="sibsp">Number of Siblings/Spouses Aboard (SibSp):</label>
+            <input type="number" name="sibsp" min="0" required>
+
+            <label for="parch">Number of Parents/Children Aboard (Parch):</label>
+            <input type="number" name="parch" min="0" required>
+
+            <label for="fare">Fare:</label>
+            <input type="number" name="fare" step="0.01" min="0" required>
+
+            <label for="embarked">Port of Embarkation:</label>
+            <select name="embarked" required>
+                <option value="C">Cherbourg (C)</option>
+                <option value="Q">Queenstown (Q)</option>
+                <option value="S">Southampton (S)</option>
+            </select>
+
+            <label for="title">Title:</label>
+            <select name="title" required>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+                <option value="Master">Master</option>
+                <option value="Rare">Rare</option>
+            </select>
+
+            <button type="submit">Predict Survival</button>
+        </form>
+    </div>
+</body>
+</html>
